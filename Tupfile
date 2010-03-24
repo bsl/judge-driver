@@ -1,0 +1,2 @@
+: foreach *.c |> clang -c %f -o %o |> %B.o
+: *.o         |> clang    %f -o %o |> judge-driver
