@@ -125,6 +125,9 @@ int main(int argc, char ** argv)
     }
 
     if (pid == solution_pid) {
+        process_destroy(timer_pid);
+        process_destroy(relay_pid);
+
         /* The child ended first. If it exited normally, communicate that to
          * the caller.
          */
